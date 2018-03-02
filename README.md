@@ -28,14 +28,15 @@ In order to run it in your machine you have to:
 - First to download or clone [US states filter](https://github.com/Salsatore89/usa-states-filter) repository. 
 - Then you should run in your Terminal 
 ```sh
-$ npm install
-$ npm run start
+$ yarn install
+$ yarn run start
 ```
-- If everything goes ok, you should now see the app running at http://localhost:8080/
+- You can now see the app running at http://localhost:8080/
 
 ### Todos
 
  - Write more tests.
+ - Think about the best way to implement google maps.
 
 License
 ----
