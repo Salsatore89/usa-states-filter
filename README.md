@@ -2,14 +2,14 @@
 
 US states filter is a little but smart web app, that filters the elements on a dropdown with all the US states. 
 
-## Features
+### Features
 
   - Fully responsive.
   - Text prediction and multiple selection.
   - Selected states are saved after refresh.
   - When selected states are clicked, a intro of a wikipedia artcile and a background image related to the state are loaded.
 
-## Usage
+### Usage
 
 It's easy!:
   - Type your search and select one of the states suggested in the dropdown.
@@ -24,22 +24,14 @@ It is build using mainly [React](https://reactjs.org/) together with [this](http
 
 ### Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
-
-Install the dependencies and devDependencies and start the server.
-
+In order to run it in your machine you have to:
+- First to download or clone [US states filter](https://github.com/Salsatore89/usa-states-filter) repository. 
+- Then you should run in your Terminal 
 ```sh
-$ cd dillinger
-$ npm install -d
-$ node app
+$ npm install
+$ npm run start
 ```
-
-For production environments...
-
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
+- If everything goes ok, you should now see the app running at http://localhost:8080/
 
 ### Todos
 
