@@ -25,13 +25,13 @@ It is build using mainly [React](https://reactjs.org/) together with [this](http
 ### Installation
 
 In order to run it in your machine you have to:
-- First to download or clone [US states filter](https://github.com/Salsatore89/usa-states-filter) repository. 
-- Then you should run in your Terminal 
+- Download or clone [US states filter](https://github.com/Salsatore89/usa-states-filter) repository. 
+- Run in your Terminal the following scripts:
 ```sh
 $ yarn install
 $ yarn run start
 ```
-- You can now see the app running at http://localhost:8080/
+- Now you can see the app running at http://localhost:8080/!
 
 ### Todos
 
