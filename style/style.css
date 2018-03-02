@@ -4,7 +4,8 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 ul {
@@ -20,7 +21,8 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0rem;
   height: inherit;
   font-family: Helvetica, Arial, sans-serif;
@@ -42,30 +44,37 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 60%;
     max-width: 50rem;
     margin: 0 auto;
     text-align: center;
-    box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+            box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
     background-color: rgba(255,255,255,0.85);
     border-radius: 0.5rem;
     padding: 5rem 5rem 6rem 5rem;
 }
 
+/* Heading styles with fallback for the background clip */
 .filter__heading {
     margin-bottom: 2rem;
     font-size: 5rem;
     font-family: 'Lobster', cursive;
-    background-image: url(../public/img/us-flag.jpg);
+    color: #000654;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url(../public/img/us-flag.jpg) repeat;
+    background: -o-linear-gradient(transparent, transparent);
     -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
 .filter__heading-red {
     color: #bf010a;
     font-weight: normal;
+    -webkit-text-fill-color: #bf010a;
 }
 
 .filter__heading-tertiary {
@@ -83,8 +92,11 @@ body {
     margin-bottom: 1rem;
 }
 
-.filter__error {
+.error {
+    margin: 2rem 0;
     color: red;
+    font-size: 1.2rem;
+    font-style: italic;
 }
 
 .Select-control {
@@ -126,15 +138,19 @@ body {
     border-bottom: 1px solid #1c2b4e;
     margin-top: 0.3rem;
     padding: 3px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
     transition: all 0.2s;
 }
 
 .filter__wiki-link:hover {
     background-color: #1c2b4e;
     color: #fff;
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
     -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+        transform: translateY(-2px);
 }
 
 @media only screen and (max-width: 56.25em) {

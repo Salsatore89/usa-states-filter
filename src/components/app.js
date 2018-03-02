@@ -9,7 +9,7 @@ class App extends Component {
     img: '', // Here we store the Unsplash background image
     query: 'usa', // keyword for the API call that retrieves the images
     numberOfImgs: 30, // number of images form which we want to randomly choose our background image
-    errorMsg: '', // to store a possible error message after trying to get the images, and the wikipedia info
+    errorMsgUnsplashImg: '', // to store a possible error message after trying to get the images
   }
   fetchUnsplashImg() {
     axios

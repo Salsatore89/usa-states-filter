@@ -11,8 +11,9 @@ class Filter extends Component {
         stayOpen: false, // Leave the list open once the state is selected from it
         value: [], // Values selected from dropdown
         errorMsg: '', // error message displayed en case local storage fails
-        wikiInfo: '',
-        wikiLink: ''
+        wikiInfo: '', // Info retrieved from wikipedia of the selected state
+        wikiLink: '', // Href to the article in wikipedia
+        errorMsgWiki: '' // error message displayed en case wikipedia call fails
     };
     handleSelectChange = (value) => {
         this.setState({
@@ -28,13 +29,13 @@ class Filter extends Component {
             .then(data => {
                 this.setState({
                     // Get wikiInfo (trimmed) and wikiLink of clicked state
-                    wikiInfo: data.data[2][0].substring(0, 180) + '...',
+                    wikiInfo: data.data[2][0].substring(0, 180),
                     wikiLink: data.data[3][0]
                 });
             })
             .catch(err => {
                 this.setState({
-                    errorMsgUnsplashImg: 'Sorry, an error occurred, wikipedia info could not be loaded' + err
+                    errorMsgWiki: 'Sorry, an error occurred, wikipedia info could not be loaded. ' + err
                 });
             });
     }
@@ -94,7 +95,7 @@ class Filter extends Component {
                         <li>✓ An intro of its wikipedia article will also appear below.</li>
                     </ul>
                 </div>
-                <p className="filter__error">{this.state.errorMsg}</p>
+                <p className="error">{this.state.errorMsg}</p>
                 <Select.Async
                     closeOnSelect={!this.state.stayOpen}
                     multi
@@ -112,9 +113,11 @@ class Filter extends Component {
                 />
                 {this.state.wikiInfo &&
                     <div className="filter__wiki">
-                        <p className="filter__wiki-info"><img className="filter__wiki-icon" src="../public/img/info-icon.png" alt="Wikipedia info" />{this.state.wikiInfo}</p>
+                        <p className="filter__wiki-info"><img className="filter__wiki-icon" src="../public/img/info-icon.png" alt="Wikipedia info" />{this.state.wikiInfo}...</p>
                         <a className="filter__wiki-link" href={this.state.wikiLink} target="_blank">more info &rarr;</a>
-                    </div>
+                    </div>}
+                {this.state.errorMsgWiki &&
+                    <p className="error">{this.state.errorMsgWiki}</p>
                 }
             </section>
         );
