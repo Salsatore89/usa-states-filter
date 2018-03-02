@@ -1,0 +1,157 @@
+/* Override user agent styles */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Rem's based on root font-size, which is 62.5% of
+16px, the browser default font-size */
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0rem;
+  height: inherit;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.container {
+    height: inherit;
+}
+
+.background {
+    height: inherit;
+    background-size: cover;
+    position: relative;
+}
+
+.filter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 0.5rem;
+    padding: 5rem 5rem 6rem 5rem;
+}
+
+.filter__heading {
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    font-family: 'Lobster', cursive;
+    background-image: url(../public/img/us-flag.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.filter__heading-red {
+    color: #bf010a;
+    font-weight: normal;
+}
+
+.filter__heading-tertiary {
+    margin-bottom: 2rem;
+}
+
+.filter__instructions {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin-bottom: 3rem;
+    margin-top: 1em;
+}
+
+.filter__instructions ul li {
+    margin-bottom: 1rem;
+}
+
+.filter__error {
+    color: red;
+}
+
+.Select-control {
+    border: 1px solid #666!important;
+    cursor: pointer;
+}
+
+.Select-placeholder, .Select--single > .Select-control .Select-value{
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #999!important;
+}
+
+.filter__wiki {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.9rem;
+    margin-top: 3rem;
+    padding-left: 3rem;
+    margin-left: -3rem;
+    max-height: 18rem;
+}
+
+.filter__wiki-icon {
+    position: relative;
+    top: 0.4rem;
+    left: -0.2rem;
+}
+
+.filter__wiki-info {
+    text-align: justify;
+}
+
+.filter__wiki-link {
+    float: right;
+    font-size: 1.6rem;
+    color: #bf010a;
+    text-decoration: none;
+    border-bottom: 1px solid #1c2b4e;
+    margin-top: 0.3rem;
+    padding: 3px;
+    transition: all 0.2s;
+}
+
+.filter__wiki-link:hover {
+    background-color: #1c2b4e;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 56.25em) {
+    .filter {
+        width: 80%;
+        padding: 3rem 3rem 4rem 3rem;
+        max-width: auto;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    /* resize down the general font size */
+    html {
+        font-size: 56.25%;
+    }
+    /* Let the filter take 90% of available width in mobile */
+    .filter {
+        width: 90%;
+    }
+  }
