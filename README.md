@@ -37,6 +37,13 @@ $ yarn run start
 
  - Write more tests.
  - Think about the best way to implement google maps.
+ 
+### Why React
+
+ I chose to code this project using ReactJS mainly because I feel more comfortable using this library. VueJS is another Javascript library that I have used, but I have the feeling with it that things come a bit “out of the box”. While with React I think the overall logic and data flow is clearer, and I have almost all the time the feeling that I’m just writing Javascript, not a kind of different language. 
+Leaving aside these subjective considerations there are reasons for a developer and for a company too to choose React over other Javascript frameworks. It is backed up by Facebook, and used by big companies like Uber, AirBnb, Netflix, Yahoo, Amazon Web Services… Moreover, based on the google trends and github trend statistics, it is the library that is growing at the fastest rate than all the others. In addition to this it has a very big and active community, a quite important thing when you’re looking for third party libraries or need some advice on forums. React Native is also a very useful library that allows us to develop mobile apps, for Android as well as for iOS. 
+In any case, although all these facts should always be taken into consideration, at the end of the day, choosing one library over the other depends in a lot of variables: developer team, size and kind of project (for example, it is said that that React works better in bigger enviroments and Vue is preferred for smaller apps), personal preferences…, because, at least in the case of Vue and React, are quite similar, have more in common than differences, and is very hard to say (and risky): “this is better that this”, and that’s why every situation has to be studied thoroughly before making a decision.
+Having said that, I must say that if the team I’m working is using Vue, or any other other Javascript framework, it wouldn’t be in any case a problem for me to catch up, refresh my knowledge and learn their “way of getting things done”, in order to contribute from the first day to the project. 
 
 License
 ----
